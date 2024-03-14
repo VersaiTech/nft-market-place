@@ -1,0 +1,49 @@
+Chain Id: 137 (Polygon (Matic))
+
+Factory Contract: 0x9cc741366d736dcdd542c9f1202f418c760cdea3
+
+Marketplace Contract: 0x1ce9bf94a9d09fac630fb4e58f2b7471c7fd5975
+
+Auction Contract: 0x0ae30f0ee55db3f99933522cdf4817c4ff290f25
+
+
+
+***************************************************************************************************
+
+
+
+Chain Id: 56 (Binance Smart Chain (BNB))
+
+Factory Contract: 0x9cc741366d736dcdd542c9f1202f418c760cdea3
+
+Marketplace Contract: 0x1ce9bf94a9d09fac630fb4e58f2b7471c7fd5975
+
+Auction Contract: 0x0ae30f0ee55db3f99933522cdf4817c4ff290f25
+
+
+
+***************************************************************************************************
+
+
+
+
+Chain Id: 1 (Ethereum Mainnet)
+
+Factory Contract: 
+
+Marketplace Contract: 
+
+Auction Contract: 
+
+
+
+***************************************************************************************************
+
+Platform Fee: 1.5%
+
+Listing Fee: 1000000000
+
+Fee Recipient: 0x61e2E9aC4D1178F6487ac10aD0C53ecd9F7927Fe
+
+Owner Address: 0x61e2E9aC4D1178F6487ac10aD0C53ecd9F7927Fe
+
