@@ -20,7 +20,7 @@ Authentication API routes
 */
 
 Accountroutes.post("/account/api/UserRegister", AccountController.userregister) 
-Accountroutes.post("/account/api/auth/User", AccountController.authUser) 
+Accountroutes.post("/account/api/auth/User", AccountController.authUser)    
 Accountroutes.get("/account/api/auth/Userrefresh", AccountController.authrefresh) 
 
 Accountroutes.post("/account/api/Userlogin", AccountController.userlogin) 

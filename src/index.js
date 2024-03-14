@@ -15,7 +15,7 @@ const EventRoutes = require("./routes/Eventroutes");
 const {Connection} = require("./config/db");
 require("dotenv").config();
 
-const Port = 80 || process.env.PORT;
+const Port = 9000 || process.env.PORT;
 
 // Set up middleware
 app.use(bodyParser.json());
@@ -49,4 +49,5 @@ Connection(username, password);
 
 app.listen(Port, () => {
     console.log("Server running on port " + Port + " Successfully.....");
+    console.log("=========================================================================");
 });

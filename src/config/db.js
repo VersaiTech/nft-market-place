@@ -10,11 +10,12 @@ Connect to MongoDB database using the provided username and password
 
 const Connection = async (username, password) => {
 
-    const URL = `mongodb+srv://${username}:${password}@serverlessinstance0.sgvhpfk.mongodb.net/Mundum_NFTMarketplace`;
+    const URL = `mongodb+srv://jaylunagariya:Jay1501@cluster0.wp4chqh.mongodb.net/coinwiz`;
     try {
 
         mongoose.set('strictQuery', false);
         mongoose.connect(URL, {useUnifiedTopology: true});
+        console.log("=========================================================================");
         console.log("Database Connected");
     } catch (err) {
         console.log("Error while connecting to mongoose :" + err);

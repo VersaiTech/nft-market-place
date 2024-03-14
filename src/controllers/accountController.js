@@ -687,7 +687,7 @@ const getMyAllAuctions = async (req, res) => {   //Shubham Singh
     */
 
 const generateapikey = async (req, res,next) => {
-    const username = req.query.user;
+    const username = req.query.username;
     try {
       const foundUser = await User.findOne({username:username});
       if(!foundUser){
@@ -734,17 +734,18 @@ const authapikey = async (req, res, next) => {
     */
 
 const getapiinfo = async (req, res) => {
-    const username = req.query.user;
+    const username = req.query.username;
     try {
         const foundUser = await User.findOne({username: username});
-        if (! foundUser) {
-            res.status(404).send({
-                error: "User with Username" + username + "is not found in database"
-            });
-        }
+        console.log(foundUser);
+        // if (!foundUser) {
+        //     return res.status(404).send({
+        //         error: "User with Username" + "username" + "is not found in database"
+        //     });
+        // }
        return res.status(200).json({apikey: foundUser.apikey});
     } catch (err) {
-        res.status(404).json({message: err.message});
+        res.status(404).json({message: "Server Error"});
     }
 };
 
