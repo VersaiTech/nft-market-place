@@ -10,7 +10,7 @@ import {
   BASEAPI_PATH,
 } from '../utils';
 
-import logo from '../images/logo.png';
+import logo from '../images/newlogo.png';
 import axios from 'axios';
 import Login from './Modals/login';
 
@@ -292,7 +292,7 @@ const Navbar = () => {
                     //   document.body.style.overflow = "hidden";
                   }}
                 >
-                  Connect Mundum
+                  Connect CoinWiz
                 </button>
               )}
 

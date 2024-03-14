@@ -126,7 +126,7 @@ export const Hompage = ({ trendingNft }) => {
           <Feature
             name="Sell Your NFT"
             icon={sell}
-            description="At Mundum NFT Marketplace, we understand that selling your NFTs should be a seamless and straightforward process. That's why we've designed our platform to ensure that you can showcase and sell your digital creations effortlessly"
+            description="At CoinWiz Marketplace, we understand that selling your NFTs should be a seamless and straightforward process. That's why we've designed our platform to ensure that you can showcase and sell your digital creations effortlessly"
           />
           <Feature
             name="Super Fast"
@@ -136,7 +136,7 @@ export const Hompage = ({ trendingNft }) => {
           <Feature
             name="No Transaction Fees"
             icon={noTrasFees}
-            description="At Mundum NFT Marketplace, we believe in providing a fair and transparent platform for selling your NFTs. That's why we've eliminated transaction fees, allowing you to keep more of your earnings(except the gas fees of blockchain transaction)."
+            description="At CoinWiz Marketplace, we believe in providing a fair and transparent platform for selling your NFTs. That's why we've eliminated transaction fees, allowing you to keep more of your earnings(except the gas fees of blockchain transaction)."
           />
           <Feature
             name="E Commerce Experience"
