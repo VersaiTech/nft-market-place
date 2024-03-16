@@ -44,6 +44,61 @@ export const CATEGORY = [
   },
 ];
 
+// export const CHAIN_DATA = [
+//   {
+//     id: 1,
+//     name: 'Ethereum',
+//     hex: '0x1',
+//     symbol: 'ETH',
+//     chainInfo: {
+//       chainId: '0x1',
+//       chainName: 'Ethereum',
+//       rpcUrls: ['https://eth.llamarpc.com'],
+//       nativeCurrency: {
+//         name: 'ETH',
+//         symbol: 'ETH',
+//         decimals: 18,
+//       },
+//       blockExplorerUrls: ['https://etherscan.io'],
+//     },
+//   },
+//   {
+//     id: 56,
+//     name: 'Binance',
+//     hex: '0x38',
+//     symbol: 'BNB',
+//     chainInfo: {
+//       chainId: '0x38',
+//       chainName: 'Binance',
+//       rpcUrls: ['https://bsc-dataseed.binance.org'],
+//       nativeCurrency: {
+//         name: 'BNB',
+//         symbol: 'BNB',
+//         decimals: 18,
+//       },
+//       blockExplorerUrls: ['https://bscscan.com'],
+//     },
+//   },
+//   {
+//     id: 137,
+//     name: 'Polygon',
+//     hex: '0x89',
+//     symbol: 'MATIC',
+//     chainInfo: {
+//       chainId: '0x89',
+//       chainName: 'Polygon',
+//       rpcUrls: ['https://polygon.llamarpc.com'],
+//       nativeCurrency: {
+//         name: 'Polygon',
+//         symbol: 'MATIC',
+//         decimals: 18,
+//       },
+//       blockExplorerUrls: ['https://polygonscan.com'],
+//     },
+//   },
+// ];
+
+
 export const CHAIN_DATA = [
   {
     id: 1,
@@ -63,20 +118,20 @@ export const CHAIN_DATA = [
     },
   },
   {
-    id: 56,
-    name: 'Binance',
-    hex: '0x38',
+    id: 97,
+    name: 'Binance Smart Chain Testnet',
+    hex: '0x61',
     symbol: 'BNB',
     chainInfo: {
-      chainId: '0x38',
-      chainName: 'Binance',
-      rpcUrls: ['https://bsc-dataseed.binance.org'],
+      chainId: '0x61',
+      chainName: 'Binance Smart Chain Testnet', 
+      rpcUrls: ['https://data-seed-prebsc-1-s1.binance.org:8545'],
       nativeCurrency: {
         name: 'BNB',
         symbol: 'BNB',
         decimals: 18,
       },
-      blockExplorerUrls: ['https://bscscan.com'],
+      blockExplorerUrls: ['https://testnet.bscscan.com'],
     },
   },
   {
@@ -97,3 +152,4 @@ export const CHAIN_DATA = [
     },
   },
 ];
+

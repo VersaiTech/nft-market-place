@@ -121,6 +121,7 @@ export const CreateNFT = () => {
   };
 
   const handleSubmit = async (e) => {
+    console.log('submit');
     e.preventDefault();
 
     // formValidation
@@ -139,6 +140,7 @@ export const CreateNFT = () => {
       if (chain.id !== chainId) {
         await switchNetwork(dispatch, state.chain);
       }
+      console.log({ account });
       if (account) {
         setState({ loader: true });
 

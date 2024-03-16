@@ -1,6 +1,6 @@
 // export const BASEAPI_PATH = 'https://api-marketplace.mundum.com'; //prod
 // export const BASEAPI_PATH = process.env.BASEAPI_PATH;
-export const BASEAPI_PATH = "http://localhost:9000";
+export const BASEAPI_PATH = "165.22.218.54:9000";
 // export const BASEAPI_PATH = "http://127.0.0.1:9000";
 // export const BASEAPI_PATH = 'http://127.0.0.1:8080';
 
