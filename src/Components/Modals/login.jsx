@@ -225,6 +225,7 @@ export default function Login({ loginModal, setLoginModal }) {
       dispatch({ type: 'UPDATE_CURRENT_USER', payload: registerRes });
       setLoginModal(false);
     } catch (error) {
+      console.log(error)
       handleError(error);
     } finally {
       setState({
