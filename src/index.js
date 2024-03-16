@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(cors({
-    origin: 'http://16.16.181.107/'
+    origin: '*'
 }));
 
 
