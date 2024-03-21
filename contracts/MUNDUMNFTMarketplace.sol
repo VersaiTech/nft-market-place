@@ -4,15 +4,15 @@ pragma solidity >=0.7.0 <0.9.0;
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
-import "./MUNDUMNFTFactory.sol";
+import "./COINWIZNFTFactory.sol";
 /**
-    * @title MundumNFTMarketplace
+    * @title CoinWizNFTMarketplace
     * @dev This smart contract is an NFT marketplace that allows users to create and sell their own unique NFTs.
     * It also allows users to create market items and buy NFTs that are listed on the market. 
     * The contract uses OpenZeppelin's ERC721 and ReentrancyGuard libraries.
     * 
     */
-    contract MundumNFTMarketplace is ReentrancyGuard{
+    contract CoinWizNFTMarketplace is ReentrancyGuard{
       using Counters for Counters.Counter;
      /**
      * @dev The _itemIds counter is used to generate a unique itemId for each market item that is created.
@@ -39,7 +39,7 @@ import "./MUNDUMNFTFactory.sol";
     uint256 private royaltyFee;
     uint256 public listingfee;
 
-    MUNDUMNFTFactory private immutable NFTFactory;
+    COINWIZNFTFactory private immutable NFTFactory;
     enum State{Created,Sold,Inactive}
     
     struct MarketItem {
@@ -85,7 +85,7 @@ import "./MUNDUMNFTFactory.sol";
  * @param _feerecipient The address that receives the platform fees and listing fees.
  * @param _NFTFactory The contract used to create the NFTs.
  */
-    constructor(uint256 _platformfee,uint256 _listingfee,address _feerecipient,MUNDUMNFTFactory _NFTFactory) {
+    constructor(uint256 _platformfee,uint256 _listingfee,address _feerecipient,COINWIZNFTFactory _NFTFactory) {
         owner = payable(msg.sender);
         platformFee=_platformfee;
         listingfee=_listingfee;
@@ -168,9 +168,9 @@ import "./MUNDUMNFTFactory.sol";
                 uint256 _platformFee = getPlatformFee(price);
         
                  uint256 royaltyFeeTotal; 
-                 if(NFTFactory.isMundumNFT(_nftaddress)){
-                 royaltyFee = ERC721MUNDUMNFT(_nftaddress).getRoyaltyFee();
-                 royaltyRecipient = ERC721MUNDUMNFT(_nftaddress).getRoyaltyRecipient();
+                 if(NFTFactory.isCoinWizNFT(_nftaddress)){
+                 royaltyFee = ERC721COINWIZNFT(_nftaddress).getRoyaltyFee();
+                 royaltyRecipient = ERC721COINWIZNFT(_nftaddress).getRoyaltyRecipient();
                  royaltyFeeTotal = getTotalRoyaltyFee(price,royaltyFee);
                  }
 
@@ -227,9 +227,9 @@ import "./MUNDUMNFTFactory.sol";
                 uint256 _platformFee = getPlatformFee(price);
         
                  uint256 royaltyFeeTotal; 
-                 if(NFTFactory.isMundumNFT(_nftaddress)){
-                 royaltyFee = ERC721MUNDUMNFT(_nftaddress).getRoyaltyFee();
-                 royaltyRecipient = ERC721MUNDUMNFT(_nftaddress).getRoyaltyRecipient();
+                 if(NFTFactory.isCoinWizNFT(_nftaddress)){
+                 royaltyFee = ERC721COINWIZNFT(_nftaddress).getRoyaltyFee();
+                 royaltyRecipient = ERC721COINWIZNFT(_nftaddress).getRoyaltyRecipient();
                  royaltyFeeTotal = getTotalRoyaltyFee(price,royaltyFee);
                  }
 
@@ -283,8 +283,8 @@ import "./MUNDUMNFTFactory.sol";
         {
             uint platformFeeTotal = getPlatformFee(price);
             uint royaltyFeeTotal=0;
-            if(NFTFactory.isMundumNFT(_nftaddress)){
-                royaltyFee = ERC721MUNDUMNFT(_nftaddress).getRoyaltyFee();
+            if(NFTFactory.isCoinWizNFT(_nftaddress)){
+                royaltyFee = ERC721COINWIZNFT(_nftaddress).getRoyaltyFee();
                 royaltyFeeTotal = getTotalRoyaltyFee(royaltyFee,price);
             }
             emit totalFees(platformFeeTotal+royaltyFeeTotal+price);

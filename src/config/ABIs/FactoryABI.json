@@ -120,7 +120,7 @@
 				"type": "address"
 			}
 		],
-		"name": "isMundumNFT",
+		"name": "isCoinWizNFT",
 		"outputs": [
 			{
 				"internalType": "bool",

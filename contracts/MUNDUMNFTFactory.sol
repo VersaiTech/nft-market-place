@@ -2,16 +2,16 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 import "@openzeppelin/contracts/utils/Counters.sol";
-import "./ERC721MUNDUM.sol";
+import "./ERC721COINWIZ.sol";
 
 /**
-@dev MUNDUMNFTFactory is a smart contract that facilitates the creation of ERC721 Non-Fungible Tokens (NFTs) on the Ethereum blockchain.
+@dev COINWIZNFTFactory is a smart contract that facilitates the creation of ERC721 Non-Fungible Tokens (NFTs) on the Ethereum blockchain.
 */
-contract MUNDUMNFTFactory {
+contract COINWIZNFTFactory {
 
    using Counters for Counters.Counter;
    // Counter to keep track of the number of NFTs created by the contract
-   Counters.Counter private _mundumnfts;
+   Counters.Counter private _coinwiznfts;
 
    // Address of the contract owner
    address private owner;
@@ -20,10 +20,10 @@ contract MUNDUMNFTFactory {
    address private marketplaceaddress;
 
    // Mapping to keep track of the NFTs created by each address
-   mapping(address=>address[]) private mundumnftslist;
+   mapping(address=>address[]) private coinwiznftslist;
 
    // Mapping to validate the NFT contracts created by this factory
-   mapping(address=>bool) private MundumNFTvalidator;
+   mapping(address=>bool) private CoinWizNFTvalidator;
     
    // Event to be emitted whenever an NFT contract is created by this factory 
    event createdNFTAddress(address indexed creator,address nftcontract);
@@ -58,7 +58,7 @@ contract MUNDUMNFTFactory {
        require(_choice==0,"Invalid Choice");
         if(_choice==0){
                nft721address=create721(_name,_symbol,_royaltyfee,_recepient,_ownerCollection);
-               mundumnftslist[msg.sender].push(nft721address);
+               coinwiznftslist[msg.sender].push(nft721address);
                return nft721address;
         }
    } 
@@ -73,11 +73,11 @@ contract MUNDUMNFTFactory {
  */ 
    function create721(string memory _name,string memory _symbol,uint256 _royaltyfee,address _recepient,address _ownerCollection) private returns(address){
         require(marketplaceaddress!=address(0),"Must have marketplace address");
-        ERC721MUNDUMNFT mundum721=new ERC721MUNDUMNFT(_name,_symbol,marketplaceaddress,_royaltyfee,_recepient,_ownerCollection);
-        address temp = address(mundum721);
-        MundumNFTvalidator[temp] = true;
-        mundumnftslist[msg.sender].push(temp);
-         _mundumnfts.increment();
+        ERC721COINWIZNFT coinwiz721=new ERC721COINWIZNFT(_name,_symbol,marketplaceaddress,_royaltyfee,_recepient,_ownerCollection);
+        address temp = address(coinwiz721);
+        CoinWizNFTvalidator[temp] = true;
+        coinwiznftslist[msg.sender].push(temp);
+         _coinwiznfts.increment();
         
         emit createdNFTAddress(msg.sender,temp);
 
@@ -86,21 +86,21 @@ contract MUNDUMNFTFactory {
     } 
 
    /**
-@dev Checks whether a given address is a valid MUNDUMNFT contract.
+@dev Checks whether a given address is a valid COINWIZNFT contract.
 @param _nftaddress The address of the contract to be checked.
-@return A boolean indicating whether the given address is a valid MUNDUMNFT contract.
+@return A boolean indicating whether the given address is a valid COINWIZNFT contract.
 */
-     function isMundumNFT(address _nftaddress) public view returns(bool) {
-        return  MundumNFTvalidator[_nftaddress];
+     function isCoinWizNFT(address _nftaddress) public view returns(bool) {
+        return  CoinWizNFTvalidator[_nftaddress];
     } 
 
 
 /**
-@dev Returns an array of all the MundumNFT contracts created by the caller of the function.
-@return An array of all the MundumNFT contracts created by the caller of the function.
+@dev Returns an array of all the CoinWizNFT contracts created by the caller of the function.
+@return An array of all the CoinWizNFT contracts created by the caller of the function.
 */
      function getMyNFTS() public view returns(address[] memory){
-        return mundumnftslist[msg.sender];
+        return coinwiznftslist[msg.sender];
      }   
 
 /**

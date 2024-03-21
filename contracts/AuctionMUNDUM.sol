@@ -4,10 +4,10 @@ pragma solidity >=0.7.0 <0.9.0;
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/interfaces/IERC721.sol";
-import "./MUNDUMNFTFactory.sol";
-import "./MUNDUMNFTMarketplace.sol";
+import "./COINWIZNFTFactory.sol";
+import "./COINWIZNFTMarketplace.sol";
 
-contract AuctionMUNDUM is ReentrancyGuard {
+contract AuctionCOINWIZ is ReentrancyGuard {
   
    using Counters for Counters.Counter;
 
@@ -19,8 +19,8 @@ contract AuctionMUNDUM is ReentrancyGuard {
     address private _royaltyRecipient;
     uint256 private _royaltyFee;   
      
-    MUNDUMNFTFactory private immutable NFTFactory;
-    MundumNFTMarketplace private immutable Marketplace;
+    COINWIZNFTFactory private immutable NFTFactory;
+    CoinWizNFTMarketplace private immutable Marketplace;
  
   struct EnglishBid{
         uint256 bidId;
@@ -104,7 +104,7 @@ contract AuctionMUNDUM is ReentrancyGuard {
     event NonWinningBidderRefunded(uint256 _bidId, address bidder, uint256 refundAmount);
 
 
-     constructor(MUNDUMNFTFactory _NFTFactory,MundumNFTMarketplace _Marketplace){
+     constructor(COINWIZNFTFactory _NFTFactory,CoinWizNFTMarketplace _Marketplace){
           NFTFactory=_NFTFactory;
           Marketplace=_Marketplace;
      }
@@ -167,10 +167,10 @@ contract AuctionMUNDUM is ReentrancyGuard {
         uint256 platformFee = Marketplace.getPlatformFee(currBidPrice);
         
         uint256 royaltyFeeTotal; 
-        if(NFTFactory.isMundumNFT(currBid.nftAddress))
+        if(NFTFactory.isCoinWizNFT(currBid.nftAddress))
         {    
-            _royaltyFee = ERC721MUNDUMNFT(currBid.nftAddress).getRoyaltyFee();
-            _royaltyRecipient = ERC721MUNDUMNFT(currBid.nftAddress).getRoyaltyRecipient();
+            _royaltyFee = ERC721COINWIZNFT(currBid.nftAddress).getRoyaltyFee();
+            _royaltyRecipient = ERC721COINWIZNFT(currBid.nftAddress).getRoyaltyRecipient();
             royaltyFeeTotal = getTotalRoyaltyFee(currBidPrice,_royaltyFee);
         }
         (bool success,)=payable(feeRecipient).call{value:platformFee}("");
@@ -277,9 +277,9 @@ contract AuctionMUNDUM is ReentrancyGuard {
             uint256 platformFee = Marketplace.getPlatformFee(prevBid);
             address feeRecipient = Marketplace.getFeeRecipient();
             uint256 royaltyFeeTotal;
-            if (NFTFactory.isMundumNFT(currBid.nftAddress)) {
-                _royaltyFee = ERC721MUNDUMNFT(currBid.nftAddress).getRoyaltyFee();
-                _royaltyRecipient = ERC721MUNDUMNFT(currBid.nftAddress).getRoyaltyRecipient();
+            if (NFTFactory.isCoinWizNFT(currBid.nftAddress)) {
+                _royaltyFee = ERC721COINWIZNFT(currBid.nftAddress).getRoyaltyFee();
+                _royaltyRecipient = ERC721COINWIZNFT(currBid.nftAddress).getRoyaltyRecipient();
                 royaltyFeeTotal = getTotalRoyaltyFee(_royaltyFee, prevBid);
             }
 
@@ -355,8 +355,8 @@ contract AuctionMUNDUM is ReentrancyGuard {
             address _nftaddress = currBid.nftAddress;
             uint platformFeeTotal = Marketplace.getPlatformFee(price);
             uint royaltyFeeTotal=0;
-            if(NFTFactory.isMundumNFT(_nftaddress)){
-                _royaltyFee = ERC721MUNDUMNFT(_nftaddress).getRoyaltyFee();
+            if(NFTFactory.isCoinWizNFT(_nftaddress)){
+                _royaltyFee = ERC721COINWIZNFT(_nftaddress).getRoyaltyFee();
                 royaltyFeeTotal = getTotalRoyaltyFee(_royaltyFee,price);
             }
             uint256 _finalPrice = platformFeeTotal+royaltyFeeTotal+price;
@@ -370,8 +370,8 @@ contract AuctionMUNDUM is ReentrancyGuard {
             address _nftaddress = currBid.nftAddress;
             uint platformFeeTotal = Marketplace.getPlatformFee(price);
             uint royaltyFeeTotal=0;
-            if(NFTFactory.isMundumNFT(_nftaddress)){
-                _royaltyFee = ERC721MUNDUMNFT(_nftaddress).getRoyaltyFee();
+            if(NFTFactory.isCoinWizNFT(_nftaddress)){
+                _royaltyFee = ERC721COINWIZNFT(_nftaddress).getRoyaltyFee();
                 royaltyFeeTotal = getTotalRoyaltyFee(_royaltyFee,price);
             }
             uint256 _finalPrice = bidValue+platformFeeTotal+royaltyFeeTotal-amountBid[msg.sender][_bidId];

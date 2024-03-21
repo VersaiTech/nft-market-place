@@ -159,7 +159,7 @@ const createPayment = async (req, res) => {
             customer: customer_id,
             payment_method: attachpaymentMethod.id,
             setup_future_usage: 'off_session',
-            description: "MUNDUM Fiat payment for NFT",
+            description: "COINWIZ Fiat payment for NFT",
             shipping: {
                 name: name,
                 address: billing_details

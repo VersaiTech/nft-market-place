@@ -17,7 +17,7 @@
 				"type": "address"
 			},
 			{
-				"internalType": "contract MUNDUMNFTFactory",
+				"internalType": "contract COINWIZNFTFactory",
 				"name": "_NFTFactory",
 				"type": "address"
 			}
@@ -444,12 +444,12 @@
 						"type": "uint256"
 					},
 					{
-						"internalType": "enum MundumNFTMarketplace.State",
+						"internalType": "enum CoinWizNFTMarketplace.State",
 						"name": "status",
 						"type": "uint8"
 					}
 				],
-				"internalType": "struct MundumNFTMarketplace.MarketItem[]",
+				"internalType": "struct CoinWizNFTMarketplace.MarketItem[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -504,12 +504,12 @@
 						"type": "uint256"
 					},
 					{
-						"internalType": "enum MundumNFTMarketplace.State",
+						"internalType": "enum CoinWizNFTMarketplace.State",
 						"name": "status",
 						"type": "uint8"
 					}
 				],
-				"internalType": "struct MundumNFTMarketplace.MarketItem[]",
+				"internalType": "struct CoinWizNFTMarketplace.MarketItem[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -564,12 +564,12 @@
 						"type": "uint256"
 					},
 					{
-						"internalType": "enum MundumNFTMarketplace.State",
+						"internalType": "enum CoinWizNFTMarketplace.State",
 						"name": "status",
 						"type": "uint8"
 					}
 				],
-				"internalType": "struct MundumNFTMarketplace.MarketItem[]",
+				"internalType": "struct CoinWizNFTMarketplace.MarketItem[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -697,7 +697,7 @@
 				"type": "uint256"
 			},
 			{
-				"internalType": "enum MundumNFTMarketplace.State",
+				"internalType": "enum CoinWizNFTMarketplace.State",
 				"name": "status",
 				"type": "uint8"
 			}

@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
-contract ERC721MUNDUMNFT is ERC721URIStorage{
+contract ERC721COINWIZNFT is ERC721URIStorage{
 
     
     using Counters for Counters.Counter;
@@ -39,7 +39,7 @@ contract ERC721MUNDUMNFT is ERC721URIStorage{
     
     /**
 
-@dev This is the constructor function for the ERC721MUNDUMNFT contract.
+@dev This is the constructor function for the ERC721COINWIZNFT contract.
 @param _name The name of the ERC721 token.
 @param _symbol The symbol of the ERC721 token.
 @param _marketplaceaddress The address of the marketplace contract that will be used for trading ERC721 tokens.
