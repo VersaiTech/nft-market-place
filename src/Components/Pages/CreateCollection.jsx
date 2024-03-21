@@ -359,7 +359,7 @@ export const CreateCollection = () => {
             URL
           </label>
           <p>
-            Customize your URL on Mundum. Must only contain lowercase letters,
+            Customize your URL on CoinWiz. Must only contain lowercase letters,
             numbers and hyphens
           </p>
           <input
@@ -402,7 +402,7 @@ export const CreateCollection = () => {
             Category and Tags
           </label>
           <p>
-            Make your items more discoverable on Mundum by adding tags and a
+            Make your items more discoverable on CoinWiz by adding tags and a
             category.
           </p>
           <select

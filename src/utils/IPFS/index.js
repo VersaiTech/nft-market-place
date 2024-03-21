@@ -21,7 +21,7 @@ const client = create({
 export const handleFileIpfs = async (data) => {
   try {
     const added = await client.add(data);
-    const url = `https://mundum.infura-ipfs.io/ipfs/${added.path}`;
+    const url = `https://coinwiz.infura-ipfs.io/ipfs/${added.path}`;
     return url;
   } catch (err) {
     console.log(err);
@@ -31,7 +31,7 @@ export const handleFileIpfs = async (data) => {
 export const handleMetaDataIpfs = async (data) => {
   try {
     const added = await client.add(JSON.stringify(data));
-    const url = `https://mundum.infura-ipfs.io/ipfs/${added.path}`;
+    const url = `https://coinwiz.infura-ipfs.io/ipfs/${added.path}`;
     return url;
   } catch (err) {
     console.log(err);

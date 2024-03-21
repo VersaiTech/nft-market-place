@@ -2,12 +2,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "contract MUNDUMNFTFactory",
+				"internalType": "contract COINWIZNFTFactory",
 				"name": "_NFTFactory",
 				"type": "address"
 			},
 			{
-				"internalType": "contract MundumNFTMarketplace",
+				"internalType": "contract CoinWizNFTMarketplace",
 				"name": "_Marketplace",
 				"type": "address"
 			}
@@ -377,7 +377,7 @@
 				"type": "bool"
 			},
 			{
-				"internalType": "enum AuctionMUNDUM.State",
+				"internalType": "enum AuctionCOINWIZ.State",
 				"name": "status",
 				"type": "uint8"
 			},
@@ -475,7 +475,7 @@
 				"type": "bool"
 			},
 			{
-				"internalType": "enum AuctionMUNDUM.State",
+				"internalType": "enum AuctionCOINWIZ.State",
 				"name": "status",
 				"type": "uint8"
 			},

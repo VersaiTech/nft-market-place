@@ -20,7 +20,7 @@ const MarketplaceABI = [
         type: 'address',
       },
       {
-        internalType: 'contract MUNDUMNFTFactory',
+        internalType: 'contract COINWIZNFTFactory',
         name: '_NFTFactory',
         type: 'address',
       },
@@ -447,12 +447,12 @@ const MarketplaceABI = [
             type: 'uint256',
           },
           {
-            internalType: 'enum MundumNFTMarketplace.State',
+            internalType: 'enum CoinWizNFTMarketplace.State',
             name: 'status',
             type: 'uint8',
           },
         ],
-        internalType: 'struct MundumNFTMarketplace.MarketItem[]',
+        internalType: 'struct CoinWizNFTMarketplace.MarketItem[]',
         name: '',
         type: 'tuple[]',
       },
@@ -507,12 +507,12 @@ const MarketplaceABI = [
             type: 'uint256',
           },
           {
-            internalType: 'enum MundumNFTMarketplace.State',
+            internalType: 'enum CoinWizNFTMarketplace.State',
             name: 'status',
             type: 'uint8',
           },
         ],
-        internalType: 'struct MundumNFTMarketplace.MarketItem[]',
+        internalType: 'struct CoinWizNFTMarketplace.MarketItem[]',
         name: '',
         type: 'tuple[]',
       },
@@ -567,12 +567,12 @@ const MarketplaceABI = [
             type: 'uint256',
           },
           {
-            internalType: 'enum MundumNFTMarketplace.State',
+            internalType: 'enum CoinWizNFTMarketplace.State',
             name: 'status',
             type: 'uint8',
           },
         ],
-        internalType: 'struct MundumNFTMarketplace.MarketItem[]',
+        internalType: 'struct CoinWizNFTMarketplace.MarketItem[]',
         name: '',
         type: 'tuple[]',
       },
@@ -700,7 +700,7 @@ const MarketplaceABI = [
         type: 'uint256',
       },
       {
-        internalType: 'enum MundumNFTMarketplace.State',
+        internalType: 'enum CoinWizNFTMarketplace.State',
         name: 'status',
         type: 'uint8',
       },
@@ -1711,7 +1711,7 @@ const FactoryABI = [
         type: 'address',
       },
     ],
-    name: 'isMundumNFT',
+    name: 'isCoinWizNFT',
     outputs: [
       {
         internalType: 'bool',
@@ -1760,12 +1760,12 @@ const AuctionABI = [
   {
     inputs: [
       {
-        internalType: 'contract MUNDUMNFTFactory',
+        internalType: 'contract COINWIZNFTFactory',
         name: '_NFTFactory',
         type: 'address',
       },
       {
-        internalType: 'contract MundumNFTMarketplace',
+        internalType: 'contract CoinWizNFTMarketplace',
         name: '_Marketplace',
         type: 'address',
       },
@@ -2135,7 +2135,7 @@ const AuctionABI = [
         type: 'bool',
       },
       {
-        internalType: 'enum AuctionMUNDUM.State',
+        internalType: 'enum AuctionCOINWIZ.State',
         name: 'status',
         type: 'uint8',
       },
@@ -2233,7 +2233,7 @@ const AuctionABI = [
         type: 'bool',
       },
       {
-        internalType: 'enum AuctionMUNDUM.State',
+        internalType: 'enum AuctionCOINWIZ.State',
         name: 'status',
         type: 'uint8',
       },

@@ -127,7 +127,7 @@ const Navbar = () => {
     >
       <div className="container-fluid">
         <img
-          style={{ width: '100px', cursor: 'pointer' }}
+          style={{ width: '85px', cursor: 'pointer' }}
           onClick={() => navigate('/')}
           src={logo}
           className="logo"

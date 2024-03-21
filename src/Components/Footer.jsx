@@ -11,7 +11,7 @@ const Footer = () => {
             style={{ textAlign: "center" }}
           >
             <div className="mb-4">
-              <img style={{ width: "100px" }} src={logo} alt="logo" />
+              <img style={{ width: "85px" }} src={logo} alt="logo" />
             </div>
             <p className="par" style={{ color: "#ffffffab" }}>
               E-Commerce for digital assessts in an easy, fun, secure and
@@ -76,7 +76,7 @@ const Footer = () => {
                 style={{ textDecoration: "none" }}
                 className="text-reset"
               >
-                MUNDUM Support
+                COINWIZ Support
               </a>
             </p>
           </div>
@@ -106,19 +106,24 @@ const Footer = () => {
           <div className="col-lg-2">
             <h6 className="mb-4"> Get in Touch</h6>
             <span>
-            <a href="https://www.linkedin.com/company/mundum-ag-page/"><i className="footer-icons fab btn-outline-dark fa-linkedin fa-2x"></i></a>
+            {/* <a href="https://www.linkedin.com/company/coinwiz-ag-page/"><i className="footer-icons fab btn-outline-dark fa-linkedin fa-2x"></i></a> */}
+            <a href="#"><i className="footer-icons fab btn-outline-dark fa-linkedin fa-2x"></i></a>
             </span>
             <span>
-            <a href="https://instagram.com/mundum.official"><i className="footer-icons fab btn-outline-dark fa-instagram fa-2x"></i></a>
+            {/* <a href="https://instagram.com/coinwiz.official"><i className="footer-icons fab btn-outline-dark fa-instagram fa-2x"></i></a> */}
+            <a href="#"><i className="footer-icons fab btn-outline-dark fa-instagram fa-2x"></i></a>
             </span>
             <span>
-            <a href="https://twitter.com/mundum_official"><i className="footer-icons fab btn-outline-dark fa-twitter fa-2x"></i></a>
+            {/* <a href="https://twitter.com/mundum_official"><i className="footer-icons fab btn-outline-dark fa-twitter fa-2x"></i></a> */}
+            <a href="#"><i className="footer-icons fab btn-outline-dark fa-twitter fa-2x"></i></a>
             </span>
             <span>
-              <a href="https://t.me/mundum_official"><i className="footer-icons fab btn-outline-dark fa-telegram fa-2x"></i></a>
+              {/* <a href="https://t.me/mundum_official"><i className="footer-icons fab btn-outline-dark fa-telegram fa-2x"></i></a> */}
+              <a href="#"><i className="footer-icons fab btn-outline-dark fa-telegram fa-2x"></i></a>
             </span>
             <span>
-              <a href="https://discord.gg/TSX7BtAZ"><i className="footer-icons fab btn-outline-dark fa-discord fa-2x"></i> </a>
+              {/* <a href="https://discord.gg/TSX7BtAZ"><i className="footer-icons fab btn-outline-dark fa-discord fa-2x"></i> </a> */}
+              <a href="#"><i className="footer-icons fab btn-outline-dark fa-discord fa-2x"></i> </a>
             </span>
           </div>
         </div>
